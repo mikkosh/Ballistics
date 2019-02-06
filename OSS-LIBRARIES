@@ -1,0 +1,6 @@
+Credited and used open source libraries and license info
+
+Ballistics calculation (BallisticsModel.mc) is based on GNU Ballistics Libary licensed with GNU GPL license. 
+The version 0.201 of which can be found here: https://sourceforge.net/projects/ballisticslib/
+
+  

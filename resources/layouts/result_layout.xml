@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes" ?>
+<!DOCTYPE layout [
+	
+	<!ENTITY colorResult "Gfx.COLOR_WHITE">
+]>
+
+<layout id="ResultLayout">
+ 	<drawable id="topBox" />
+ 	<drawable id="separator2" />
+    <label id="id_range" x="100" y="10" text="TARGET AT" justification="Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER" font="Gfx.FONT_SMALL" color="Gfx.COLOR_BLACK" />
+   
+   
+    <label id="id_clicks_lbl" x="0" y="20" text="CLICKS" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_XTINY" color="Gfx.COLOR_LT_GRAY" />
+    <label id="gfx_clicks_ud_indicator" x="42" y="52" />
+    <label id="id_clicks_ud" x="70" y="52" justification="Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER" font="Gfx.FONT_NUMBER_MILD" color="&colorResult;" />
+    <label id="gfx_clicks_lr_indicator" x="122" y="52" />
+    <label id="id_clicks_lr" x="150" y="52" justification="Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER" font="Gfx.FONT_NUMBER_MILD" color="&colorResult;" />
+   
+    
+    <label id="id_driftdrop_lbl" x="0" y="67" text="DROP/DRIFT" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_XTINY" color="Gfx.COLOR_LT_GRAY" />
+    <label id="gfx_drop_ud_indicator" x="42" y="99" />
+    <label id="id_drop_at" x="70" y="99" justification="Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER" font="Gfx.FONT_NUMBER_MILD" color="&colorResult;" />
+    <label id="gfx_drift_lr_indicator" x="122" y="99" />
+    <label id="id_drift_at" x="150" y="99" justification="Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER" font="Gfx.FONT_NUMBER_MILD" color="&colorResult;" />
+    
+    
+    <label id="id_velo_at_lbl" x="25" y="135" text="V(t)" justification="Gfx.TEXT_JUSTIFY_RIGHT | Gfx.TEXT_JUSTIFY_VCENTER" font="Gfx.FONT_SMALL" color="Gfx.COLOR_LT_GRAY" />
+    <label id="id_velo_at" x="30" y="135" justification="Gfx.TEXT_JUSTIFY_LEFT | Gfx.TEXT_JUSTIFY_VCENTER" font="Gfx.FONT_SMALL" color="&colorResult;" />
+    
+    <label id="id_time_at_lbl" x="170" y="135" text="T(t)" justification="Gfx.TEXT_JUSTIFY_RIGHT | Gfx.TEXT_JUSTIFY_VCENTER" font="Gfx.FONT_SMALL" color="Gfx.COLOR_LT_GRAY" />
+    <label id="id_time_at" x="175" y="135" justification="Gfx.TEXT_JUSTIFY_LEFT | Gfx.TEXT_JUSTIFY_VCENTER" font="Gfx.FONT_SMALL" color="&colorResult;" />
+</layout>

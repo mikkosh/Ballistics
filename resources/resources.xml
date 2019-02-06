@@ -1,0 +1,68 @@
+<?xml version="1.0" standalone="yes" ?>
+<resources>
+	<!-- 
+	icons: 
+		epix: 40x40
+		fr920xt: 65x65
+		d2bravo: 40x40
+		fenix3: 40x40
+	-->
+    <string id="AppName">Ballistics</string>
+	<bitmap id="LauncherIcon" filename="images/launcher_icon.png" />
+	<drawable-list id="topBox" background="Gfx.COLOR_TRANSPARENT">
+	    <shape type="rectangle" x="0" y="0" height="20" width="fill" color="Gfx.COLOR_LT_GRAY" />
+  </drawable-list>
+  <drawable-list id="separator" background="Gfx.COLOR_TRANSPARENT">
+	    <shape type="rectangle" x="0" y="100" height="2" width="fill" color="Gfx.COLOR_LT_GRAY" />
+  </drawable-list>  
+  <drawable-list id="separator2" background="Gfx.COLOR_TRANSPARENT">
+	    <shape type="rectangle" x="0" y="120" height="2" width="fill" color="Gfx.COLOR_LT_GRAY" />
+  </drawable-list>
+ 
+	 <properties>
+	 	<property id="UseAtmCorr" type="boolean">true</property>
+	    <property id="SightHeight" type="float">1.6</property>
+	    <property id="ZeroRange" type="number">100</property>
+	    <property id="DragFunction" type="number">1</property>
+	    <property id="DragCoefficient" type="float">0.329</property>
+	    <property id="ClickValue" type="number">14</property>
+	    <property id="InitialVelocity" type="number">2625</property>
+	</properties>
+  <settings>
+  	<setting propertyKey="@Properties.UseAtmCorr" title="@Strings.UseAtmCorrTitle">
+        <settingConfig type="boolean" required="true" />
+    </setting>
+ 	<setting propertyKey="@Properties.SightHeight" title="@Strings.SightHeightTitle">
+ 		<settingConfig type="numeric" required="true" />
+ 	</setting>
+ 	<setting propertyKey="@Properties.ClickValue" title="@Strings.ClickValueTitle">
+        <settingConfig type="list" required="true">
+            <listEntry value="14">ClickVal14</listEntry>
+            <listEntry value="12">ClickVal12</listEntry>
+            <listEntry value="1">ClickVal1</listEntry>
+            <listEntry value="169500">ClickVal01mil</listEntry>
+            <listEntry value="2740">ClickVal02mil</listEntry>
+        </settingConfig>
+    </setting>
+ 	<setting propertyKey="@Properties.ZeroRange" title="@Strings.ZeroRangeTitle">
+ 		<settingConfig type="numeric" required="true" min="1" max="1500" />
+ 	</setting>
+  	<setting propertyKey="@Properties.DragFunction" title="@Strings.DragFunctionTitle">
+        <settingConfig type="list" required="true" >
+            <listEntry value="1">DragFG1</listEntry>
+            <listEntry value="2">DragFG2</listEntry>
+            <listEntry value="5">DragFG5</listEntry>
+            <listEntry value="6">DragFG6</listEntry>
+            <listEntry value="7">DragFG7</listEntry>
+            <listEntry value="8">DragFG8</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.DragCoefficient" title="@Strings.DragCoefficientTitle">
+ 		<settingConfig type="numeric" required="true" />
+ 	</setting>
+ 	
+    <setting propertyKey="@Properties.InitialVelocity" title="@Strings.InitialVelocityTitle">
+ 		<settingConfig type="numeric" required="true" min="1" max="5000" />
+ 	</setting>
+    </settings>  
+</resources>

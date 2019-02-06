@@ -1,0 +1,27 @@
+<resources>
+	<string id="deg">°</string>
+	
+	
+	<string id="UseAtmCorrTitle">Use sensor data for atmospheric correction</string>
+	<string id="SightHeightTitle">Sight height from bore (in)</string>
+	<string id="ZeroRangeTitle">Sight zero range (yd)</string>
+	<string id="DragCoefficientTitle">Bullet drag coefficient</string>
+	<string id="ClickValueTitle">Sight click value</string>
+	
+	
+	<string id="ClickVal14">1/4 MOA</string>
+	<string id="ClickVal12">1/2 MOA</string>
+	<string id="ClickVal1">1 MOA</string>ClickVal01mil
+	<string id="ClickVal01mil">0.1 mil</string>
+	<string id="ClickVal02mil">0.2 mil</string>
+	
+	<string id="InitialVelocityTitle">Bullet initial velocity (ft / s)</string>
+	
+	<string id="DragFunctionTitle">Bullet drag function</string>
+	<string id="DragFG1">G1</string>
+	<string id="DragFG2">G2</string>
+	<string id="DragFG5">G5</string>
+	<string id="DragFG6">G6</string>
+	<string id="DragFG7">G7</string>
+	<string id="DragFG8">G8</string>
+</resources>

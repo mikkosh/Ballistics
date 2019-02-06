@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes" ?>
+<resources>
+    <bitmap id="LauncherIcon" filename="images/launcher_icon.png" />
+	<drawable-list id="topBox" background="Gfx.COLOR_TRANSPARENT">
+	    <shape type="rectangle" x="0" y="0" height="30" width="fill" color="Gfx.COLOR_LT_GRAY" />
+  </drawable-list>
+  <drawable-list id="separator" background="Gfx.COLOR_TRANSPARENT">
+	    <shape type="rectangle" x="0" y="110" height="2" width="fill" color="Gfx.COLOR_LT_GRAY" />
+  </drawable-list>  
+  <drawable-list id="separator2" background="Gfx.COLOR_TRANSPARENT">
+	    <shape type="rectangle" x="0" y="130" height="2" width="fill" color="Gfx.COLOR_LT_GRAY" />
+  </drawable-list> 
+</resources>
