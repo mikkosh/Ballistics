@@ -218,6 +218,83 @@ module BallisticsModel {
 		var Vw = windSpeed*17.60; // Convert to inches per second.
 		return (Vw*(t-xx/Vi));
 	}
+
+	// This function is not used, it's an one-function implementation of ZeroAngleSolver
+	function getZeroAngle(DragFunction, DragCoefficient, Vi, SightHeight, ZeroRange, yIntercept) {
+		var t = 0.0;
+		var dt = 1.0/Vi; // The solution accuracy generally doesn't suffer if its within a foot for each second of time.
+		var y = -1 * SightHeight/12.0;
+		var x = 0.0;
+		var da; // The change in the bore angle used to iterate in on the correct zero angle.
+
+		// State variables for each integration loop.
+		var v = 0.0;
+		var vx = 0.0;
+		var vy = 0.0; // velocity
+		var vx1 = 0.0;
+		var vy1 = 0.0; // Last frame's velocity, used for computing average velocity.
+		var dv = 0.0;
+		var dvx = 0.0;
+		var dvy = 0.0; // acceleration
+		var Gx = 0.0;
+		var Gy = 0.0; // Gravitational acceleration
+		var angle = 0.0; // The actual angle of the bore.
+		var quit = 0; // We know it's time to quit our successive approximation loop when this is 1.
+		
+		da = BM.degToRad(14);
+
+		for(angle = 0; quit == 0; angle = angle+da) {
+			var sinAngle = Math.sin(angle);
+			var cosAngle = Math.cos(angle);
+			vy=Vi*sinAngle;
+			vx=Vi*cosAngle;
+			Gx=BM.GRAVITY*sinAngle;
+			Gy=BM.GRAVITY*cosAngle;
+			for(t=0,x=0,y=-1*SightHeight/12.0; x <= ZeroRange*3; t=t+dt) {
+				vy1=vy;
+				vx1=vx;
+				v=Math.pow((Math.pow(vx,2)+Math.pow(vy,2)),0.5);
+				dt=1/v;
+				
+				dv = BM.retard(DragFunction, DragCoefficient, v);
+				
+				dvy = -dv*vy/v*dt;
+				dvx = -dv*vx/v*dt;
+		
+				vx=vx+dvx;
+				vy=vy+dvy;
+				vy=vy+dt*Gy;
+				vx=vx+dt*Gx;
+				
+				x=x+dt*(vx+vx1)/2;
+				y=y+dt*(vy+vy1)/2;
+				
+				// Break early to save CPU time if we won't find a solution.
+				if (vy<0 && y<yIntercept) {
+					break;
+				}
+				if (vy>3*vx) {
+					break;
+				}
+			}	
+			if (y>yIntercept && da>0){
+				da = -1 * da/2;
+			}
+	
+			if (y<yIntercept && da<0){
+				da = -1 * da/2;
+			}
+	
+			if (BM.fabs(da) < BM.MOAToRad(0.01)) {
+				quit=1; // If our accuracy is sufficient, we can stop approximating.
+			}
+			if (angle > BM.degToRad(45.0)) {
+				quit=1; // If we exceed the 45 degree launch angle, then the projectile just won't get there, so we stop trying.
+			}
+		}
+		return BM.radToDeg(angle);
+
+	}
 	
 }
 class ZeroAngleResolver 
@@ -282,6 +359,10 @@ class ZeroAngleResolver
 
 	}
 	
+	function solve() {
+
+	}
+
 	function iterate() 
 	{
 		if(outerLoop) {
