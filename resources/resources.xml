@@ -37,11 +37,11 @@
  	</setting>
  	<setting propertyKey="@Properties.ClickValue" title="@Strings.ClickValueTitle">
         <settingConfig type="list" required="true">
-            <listEntry value="14">ClickVal14</listEntry>
-            <listEntry value="12">ClickVal12</listEntry>
-            <listEntry value="1">ClickVal1</listEntry>
-            <listEntry value="169500">ClickVal01mil</listEntry>
-            <listEntry value="2740">ClickVal02mil</listEntry>
+            <listEntry value="14">@Strings.ClickVal14</listEntry>
+            <listEntry value="12">@Strings.ClickVal12</listEntry>
+            <listEntry value="1">@Strings.ClickVal1</listEntry>
+            <listEntry value="169500">@Strings.ClickVal01mil</listEntry>
+            <listEntry value="2740">@Strings.ClickVal02mil</listEntry>
         </settingConfig>
     </setting>
  	<setting propertyKey="@Properties.ZeroRange" title="@Strings.ZeroRangeTitle">
@@ -49,12 +49,12 @@
  	</setting>
   	<setting propertyKey="@Properties.DragFunction" title="@Strings.DragFunctionTitle">
         <settingConfig type="list" required="true" >
-            <listEntry value="1">DragFG1</listEntry>
-            <listEntry value="2">DragFG2</listEntry>
-            <listEntry value="5">DragFG5</listEntry>
-            <listEntry value="6">DragFG6</listEntry>
-            <listEntry value="7">DragFG7</listEntry>
-            <listEntry value="8">DragFG8</listEntry>
+            <listEntry value="1">@Strings.DragFG1</listEntry>
+            <listEntry value="2">@Strings.DragFG2</listEntry>
+            <listEntry value="5">@Strings.DragFG5</listEntry>
+            <listEntry value="6">@Strings.DragFG6</listEntry>
+            <listEntry value="7">@Strings.DragFG7</listEntry>
+            <listEntry value="8">@Strings.DragFG8</listEntry>
         </settingConfig>
     </setting>
     <setting propertyKey="@Properties.DragCoefficient" title="@Strings.DragCoefficientTitle">

@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes" ?>
+<!-- WxH 220 x 148 -->
+<layout id="MainLayout">
+ 	<drawable id="topBox" />
+ 	<drawable id="separator" />
+ 	<label id="top_heading" x="50%" y="5%" text="RANGE" justification="Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" />
+ 	
+    <label id="id_range" x="70%" y="30%" justification="Gfx.TEXT_JUSTIFY_RIGHT | Gfx.TEXT_JUSTIFY_VCENTER" font="Gfx.FONT_NUMBER_THAI_HOT" color="Gfx.COLOR_WHITE" />
+    <label id="id_range_unit" x="71%" y="30%" justification="Gfx.TEXT_JUSTIFY_LEFT | Gfx.TEXT_JUSTIFY_VCENTER" font="Gfx.FONT_SMALL" color="Gfx.COLOR_LT_GRAY" />
+    
+    <label id="id_deg_lbl" x="49%" y="60%" text="SHOT ANGLE" justification="Gfx.TEXT_JUSTIFY_RIGHT | Gfx.TEXT_JUSTIFY_VCENTER" font="Gfx.FONT_TINY" color="Gfx.COLOR_LT_GRAY" />
+    <label id="id_deg" x="51%" y="60%" justification="Gfx.TEXT_JUSTIFY_LEFT | Gfx.TEXT_JUSTIFY_VCENTER" font="Gfx.FONT_TINY" color="Gfx.COLOR_WHITE" />
+    
+    <label id="id_wind_lbl" x="49%" y="70%" text="WIND" justification="Gfx.TEXT_JUSTIFY_RIGHT | Gfx.TEXT_JUSTIFY_VCENTER" font="Gfx.FONT_TINY" color="Gfx.COLOR_LT_GRAY" />
+    <label id="id_windspd" x="51%" y="70%" justification="Gfx.TEXT_JUSTIFY_LEFT | Gfx.TEXT_JUSTIFY_VCENTER" font="Gfx.FONT_TINY" color="Gfx.COLOR_WHITE" />
+    <label id="winddir_indicator" x="50%" y="80%" />
+</layout>

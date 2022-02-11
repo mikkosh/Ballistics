@@ -1,7 +1,7 @@
 <menu id="MainMenu" title="OPTIONS">
-  <menu-item id="menu_main_range">Set range</menu-item>	
-  <menu-item id="menu_main_angle">Shot angle</menu-item>
-  <menu-item id="menu_main_windage">Windage</menu-item>
-  <menu-item id="menu_main_sight">Other</menu-item>
-  <menu-item id="menu_main_reset">Reset defaults</menu-item>
+  <menu-item id="menu_main_range" label="Set range" />  
+  <menu-item id="menu_main_angle" label="Shot angle" />
+  <menu-item id="menu_main_windage" label="Windage" />
+  <menu-item id="menu_main_sight" label="Other" />
+  <menu-item id="menu_main_reset" label="Reset defaults" />
 </menu>
